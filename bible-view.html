@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Lectura Biblia</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <h1>📖 Modo Lectura</h1>
+  <button onclick="window.location.href='index.html'">
+    ⬅ Volver
+  </button>
+</header>
+
+<section class="card">
+  <h2 id="bookTitle">Libro</h2>
+
+  <select id="chapterSelect"></select>
+
+  <button onclick="loadChapter()">Leer capítulo</button>
+
+  <div id="readingBox" class="text-box">
+    Selecciona un capítulo para leer
+  </div>
+</section>
+
+<script type="module">
+import { biblia, obtenerCapitulo } from "./bible.js";
+
+const chapterSelect = document.getElementById("chapterSelect");
+const bookTitle = document.getElementById("bookTitle");
+
+let currentBook = "genesis";
+
+/* =========================
+   📚 CARGAR LIBRO (EJEMPLO GENESIS)
+========================= */
+bookTitle.innerText = "Génesis";
+
+/* capítulos simulados (puedes expandir luego real) */
+for (let i = 1; i <= 50; i++) {
+  let option = document.createElement("option");
+  option.value = i;
+  option.innerText = "Capítulo " + i;
+  chapterSelect.appendChild(option);
+}
+
+/* =========================
+   📖 CARGAR CAPÍTULO
+========================= */
+window.loadChapter = async function () {
+  const chapter = chapterSelect.value;
+
+  const data = await obtenerCapitulo(currentBook, chapter);
+
+  document.getElementById("readingBox").innerText =
+    data.texto;
+};
+</script>
+
+</body>
+</html>
