@@ -1,0 +1,99 @@
+/* =========================
+   🌸 ESTILO GENERAL
+========================= */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #fff7fb;
+  color: #4a3b4e;
+}
+
+/* =========================
+   📖 HEADER
+========================= */
+.topbar {
+  background: linear-gradient(90deg, #f7c6da, #e6d6ff);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* =========================
+   🧾 TARJETAS
+========================= */
+.card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   ✨ TEXTOS
+========================= */
+h2 {
+  color: #b56aa8;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* =========================
+   📦 CAJAS DE TEXTO
+========================= */
+.text-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fdf3fa;
+  border-radius: 12px;
+  min-height: 80px;
+  white-space: pre-wrap;
+}
+
+/* =========================
+   📝 INPUTS
+========================= */
+textarea, input, select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #e3cfe0;
+  outline: none;
+  font-size: 14px;
+}
+
+/* =========================
+   🔘 BOTONES
+========================= */
+button {
+  margin-top: 10px;
+  background: #f7b6d2;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e89ec2;
+}
+
+/* =========================
+   🌸 EFECTO SUAVE
+========================= */
+.card:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
